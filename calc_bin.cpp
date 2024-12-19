@@ -65,9 +65,9 @@ int main() {
         } else if (operation == '-') {
             cout << "Resultado de la resta***: " << subtractBinary(bin1, bin2) << endl;
         } else if (operation == '*') {
-            cout << "Resultado de la multiplicación: " << multiplyBinary(bin1, bin2) << endl;
+            cout << "Resultado de la multiplicación***: " << multiplyBinary(bin1, bin2) << endl;
         } else if (operation == '/') {
-            cout << "Resultado de la división: " << divideBinary(bin1, bin2) << endl;
+            cout << "Resultado de la división***: " << divideBinary(bin1, bin2) << endl;
         } else {
             cout << "Operación no válida." << endl;
         }
