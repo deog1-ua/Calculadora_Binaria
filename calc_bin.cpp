@@ -11,7 +11,8 @@ const int BITS = 8; // Número de bits para las operaciones binarias
 string addBinary(string a, string b) {
     bitset<BITS> num1(a);
     bitset<BITS> num2(b);
-    bitset<BITS> result = num1.to_ulong() + num2.to_ulong();
+    //bitset<BITS> result = num1.to_ulong() + num2.to_ulong();
+    bitset<BITS> result = num1.to_ulong() - num2.to_ulong();
     return result.to_string();
 }
 
