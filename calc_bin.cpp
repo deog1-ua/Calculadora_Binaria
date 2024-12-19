@@ -69,7 +69,7 @@ int main() {
         } else if (operation == '/') {
             cout << "Resultado de la división***: " << divideBinary(bin1, bin2) << endl;
         } else {
-            cout << "Operación no válida." << endl;
+            cout << "Operación no válida.!!!" << endl;
         }
     } catch (const exception &e) {
         cerr << e.what() << endl;
