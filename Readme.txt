@@ -54,3 +54,19 @@ Luego se vuelve a probar con git bisect bad y good hasta encontrar el commit que
 al encontrarlo se hace: git bisect reset
 
 se repara el código y se vuelve a hacer un commit y push con todo solucionado 
+
+Hooks de Git Implementados
+
+pre-commit: Verificar errores de compilación, si existen errores de compilación no se permite el commit.
+
+Archivo: .git/hooks/pre-commit
+
+#!/bin/bash
+echo "Verificando advertencias..."
+g++ -Wall calc_bin.cpp -o calculadora
+if [ $? -ne 0 ]; then
+    echo "Error: No se puede hacer push debido a advertencias."
+    exit 1
+fi
+
+chmod +x .git/hooks/pre-commit
